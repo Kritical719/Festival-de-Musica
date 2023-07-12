@@ -2,9 +2,14 @@ import { GaleriaFotos } from "./GaleriaFotos";
 const Galeria: React.FC = () => {
   const handleOnClickGal = (e: React.MouseEvent) => {
     const imagen = document.createElement("picture");
-    imagen.innerHTML = `<img src='../src/assets/img/grande/${
+    imagen.innerHTML = `<img src='../src/assets/img/${    
       parseInt(e.currentTarget.id) + 1
-    }.jpg' loading='lazy' width='200' height='300' alt='imagen' />  `;
+    }.webp' loading='lazy' width='200' height='300' alt='imagen' />  `;
+
+    //Imagenes .webp son las imagenes que iban en la carpeta Grande
+
+
+
 
     //Crea el overlay con la imagen
     const overlay = document.createElement("DIV");
@@ -41,11 +46,11 @@ const Galeria: React.FC = () => {
         <h3>Galería</h3>
 
         <ul className="galeria-imagenes">
-          {Array.from({ length: 12 }, (_, i) => (
+          {Array.from({ length: 12 }, (_, i) => (   
             <GaleriaFotos
               key={i}
               idImg={i.toString()}
-              imagen={`../src/assets/img/thumb/${i + 1}.webp`}
+              imagen={`../src/assets/img/${i + 1}.jpg`}  //Imagenes .jpg eran las que iban en la carpeta thumb
               onClickGal={handleOnClickGal}
             />
           ))}
