@@ -45,7 +45,7 @@ const Galeria: React.FC = () => {
             <GaleriaFotos
               key={i}
               idImg={i.toString()}
-              imagen={`../src/assets/img/thumb/${i + 1}.jpg`}
+              imagen={`../assets/img/thumb/${i + 1}.jpg`}
               onClickGal={handleOnClickGal}
             />
           ))}
