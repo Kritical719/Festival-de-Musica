@@ -2,9 +2,9 @@ import { GaleriaFotos } from "./GaleriaFotos";
 const Galeria: React.FC = () => {
   const handleOnClickGal = (e: React.MouseEvent) => {
     const imagen = document.createElement("picture");
-    imagen.innerHTML = `<img src='../assets/img/grande/${
+    imagen.innerHTML = `<img src='./assets/img/grande/${
       parseInt(e.currentTarget.id) + 1
-    }.jpg' loading='lazy' width='200' height='300' alt='imagen' />  `;
+    }.jpg' loading='lazy'  alt='imagen' />  `;
 
     //Crea el overlay con la imagen
     const overlay = document.createElement("DIV");
@@ -45,7 +45,7 @@ const Galeria: React.FC = () => {
             <GaleriaFotos
               key={i}
               idImg={i.toString()}
-              imagen={`../assets/img/thumb/${i + 1}.jpg`}
+              imagen={`./assets/img/thumb/${i + 1}.jpg`}
               onClickGal={handleOnClickGal}
             />
           ))}
