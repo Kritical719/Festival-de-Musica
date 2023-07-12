@@ -2,7 +2,7 @@ import { GaleriaFotos } from "./GaleriaFotos";
 const Galeria: React.FC = () => {
   const handleOnClickGal = (e: React.MouseEvent) => {
     const imagen = document.createElement("picture");
-    imagen.innerHTML = `<img src='../src/assets/img/grande/${
+    imagen.innerHTML = `<img src='../assets/img/grande/${
       parseInt(e.currentTarget.id) + 1
     }.jpg' loading='lazy' width='200' height='300' alt='imagen' />  `;
 
