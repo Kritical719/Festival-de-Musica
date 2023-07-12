@@ -4,7 +4,7 @@ const Galeria: React.FC = () => {
     const imagen = document.createElement("picture");
     imagen.innerHTML = `<img src='../src/assets/img/grande/${
       parseInt(e.currentTarget.id) + 1
-    }.webp' loading='lazy' width='200' height='300' alt='imagen' />  `;
+    }.jpg' loading='lazy' width='200' height='300' alt='imagen' />  `;
 
     //Crea el overlay con la imagen
     const overlay = document.createElement("DIV");
@@ -45,7 +45,7 @@ const Galeria: React.FC = () => {
             <GaleriaFotos
               key={i}
               idImg={i.toString()}
-              imagen={`../src/assets/img/thumb/${i + 1}.jpg`}
+              imagen={`../src/assets/img/thumb/${i + 1}.webp`}
               onClickGal={handleOnClickGal}
             />
           ))}
